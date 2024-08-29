@@ -9,11 +9,14 @@
 </head>
 <body>
     Add New Turtle
+    <form action="/new" method="post">
+        
     <div class="mb-3">
       <label for="exampleFormControlInput1" class="form-label">Turtle</label>
-      <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Please imput Turtle's name">
+      <input  name="Turtlename" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Please imput Turtle's name">
     </div>
-<button type="button" class="btn btn-primary">追加しよう！！</button>
+<button type="submit" class="btn btn-primary">追加しよう！！</button>
       <a class="btn btn-danger" href="/list">リスト</a>
     <a class="btn btn-success" href="/edit">修正</a>
+    </form>
 </body>

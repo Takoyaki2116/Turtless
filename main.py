@@ -1,6 +1,10 @@
 from flask import Flask
 from flask import render_template
 from flask import redirect
+from flask import request
+
+
+from datebase import Turtle
 
 app = Flask(__name__)
 
@@ -10,7 +14,8 @@ def hello():
 
 @app.route("/list")
 def list():
-    return render_template("top.html")
+  turtles = Turtle.select()
+  return render_template("top.html", turtles=turtles)
 
 @app.route("/add")
 def add():
@@ -19,5 +24,11 @@ def add():
 @app.route("/edit")
 def edit():
     return render_template("edit.html")
+
+@app.route("/new", methods=["POST"])
+def new():
+  Turtlename = request.form["Turtlename"]
+  Turtle.create(name=Turtlename)
+  return redirect("/list")
 
 app.run(host="0.0.0.0", port=8080)

@@ -12,4 +12,20 @@
     Turtles List
     <a class="btn btn-primary" href="/add">追加</a>
     <a class="btn btn-success" href="/edit">修正</a>
+    <table>
+        <thead>
+            <tr>
+                <th>Turtle ID</th>
+                <th>Turtlename</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for turtle in turtles %}
+            <tr>
+                <td>{{ turtle.id}}</td>
+                <td>{{ turtle.name }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 </body>

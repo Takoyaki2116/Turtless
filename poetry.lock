@@ -188,6 +188,16 @@ files = [
 ]
 
 [[package]]
+name = "peewee"
+version = "3.17.6"
+description = "a little orm"
+optional = false
+python-versions = "*"
+files = [
+    {file = "peewee-3.17.6.tar.gz", hash = "sha256:cea5592c6f4da1592b7cff8eaf655be6648a1f5857469e30037bf920c03fb8fb"},
+]
+
+[[package]]
 name = "werkzeug"
 version = "3.0.4"
 description = "The comprehensive WSGI web application library."
@@ -207,4 +217,4 @@ watchdog = ["watchdog (>=2.3)"]
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.10.0,<3.12"
-content-hash = "3481237ccf609223c24ab787cd4fbfb89050e382cf76ec48eec69cd3d308ec17"
+content-hash = "215e70c97e8d4829b160ec84d4d739108bb3da0c77a784300af17900903f6f88"
