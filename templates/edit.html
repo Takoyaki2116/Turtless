@@ -9,14 +9,14 @@
 </head>
 <body>
     Update Turtle
-    <form action="/edit/{{ turtle.id }}" method="post">
+    <form action="/update/{{ turtle.id }}" method="post">
        
 
         <div class="mb-3"> 
               <label for="exampleFormControlInput1" class="form-label">Turtle</label>
               <input  name="Turtlename" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Let's Edit Turtles's name" value="{{ turtle.name }}"">
             </div>
-     <a class="btn btn-danger" href="/list">リスト</a>
-     <a class="btn btn-primary" href="/add">更新</a>
+    <button type="submit" class="btn btn-primary">更新</button>
+     <a class="btn btn-danger" href="/list">削除</a>
     </form>
 </body>

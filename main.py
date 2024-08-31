@@ -26,6 +26,14 @@ def edit(id):
       turtle = Turtle.get(id=id)
       return render_template("edit.html", turtle=turtle)
 
+@app.route("/update/<id>", methods=["POST"])
+def update(id):
+      turtle = Turtle.get(id=id)
+      Turtlenamee = request.form["Turtlename"]
+      turtle.name = Turtlenamee
+      turtle.save()
+      return redirect("/list")
+
 @app.route("/new", methods=["POST"])
 def new():
   Turtlename = request.form["Turtlename"]
