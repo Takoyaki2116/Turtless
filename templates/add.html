@@ -15,7 +15,30 @@
       <label for="exampleFormControlInput1" class="form-label">Turtle</label>
       <input  name="Turtlename" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Please imput Turtle's name">
     </div>
-<button type="submit" class="btn btn-primary">追加しよう！！</button>
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        追加しよう!!
+      </button>
+
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">登録ルール</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              亀系統しか追加してはいけません、かつ、亀を虐待するような名前も違反です。
+              その上で、もう一度考え直してください
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">戻る</button>
+              <button type="submit" class="btn btn-primary">本当に追加する</button>
+            </div>
+          </div>
+        </div>
+      </div>
       <a class="btn btn-danger" href="/list">リスト</a>
     </form>
 </body>
