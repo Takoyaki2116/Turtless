@@ -17,6 +17,8 @@
               <input  name="Turtlename" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Let's Edit Turtles's name" value="{{ turtle.name }}"">
             </div>
     <button type="submit" class="btn btn-primary">更新</button>
-     <a class="btn btn-danger" href="/list">削除</a>
+    </form>
+    <form action="/delete/{{ turtle.id }}" method="post">
+        <button type="submit" class="btn btn-danger">削除</button>
     </form>
 </body>

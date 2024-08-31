@@ -2,6 +2,7 @@ from flask import Flask
 from flask import render_template
 from flask import redirect
 from flask import request
+from peewee import Delete
 
 
 from datebase import Turtle
@@ -32,6 +33,12 @@ def update(id):
       Turtlenamee = request.form["Turtlename"]
       turtle.name = Turtlenamee
       turtle.save()
+      return redirect("/list")
+
+@app.route("/delete/<id>", methods=["POST"])
+def delete(id):
+      turtle = Turtle.get(id=id)
+      turtle.delete_instance()
       return redirect("/list")
 
 @app.route("/new", methods=["POST"])
