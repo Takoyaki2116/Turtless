@@ -11,7 +11,13 @@
 <body>
     Turtles List
     <a class="btn btn-primary" href="/add">追加</a>
-
+    <form action="Search by Turtlename" method="post">
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Turtle</label>
+          <input  name="Turtlename" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Please imput Turtle's name">
+        </div>
+        <button type="button" class="btn btn-info">検索</button>
+    </form>
     <table class="table table-success table-striped">
         <thead>
             <tr>
