@@ -19,6 +19,30 @@
     <button type="submit" class="btn btn-primary">更新</button>
     </form>
     <form action="/delete/{{ turtle.id }}" method="post">
-        <button type="submit" class="btn btn-danger">削除</button>
+        <div class="text-end">
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          削除
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">本当に削除しますか</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                ID、名前を再び確認してください
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">戻る</button>
+                <button type="submit" class="btn btn-danger"">決定</button>
+              </div>
+            </div>
+          </div>
+        </div>
+          </div>
     </form>
 </body>
