@@ -15,8 +15,12 @@ def hello():
 
 @app.route("/list")
 def list():
-  turtles = Turtle.select()
-  return render_template("top.html", turtles=turtles)
+    Turtlename = request.args.get("Turtlename")
+    if Turtlename:
+        turtles = Turtle.select().where(Turtle.name.contains(Turtlename))
+    else:
+        turtles = Turtle.select()
+    return render_template("top.html", turtles=turtles)
 
 @app.route("/add")
 def add():
