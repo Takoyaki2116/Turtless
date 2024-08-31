@@ -8,12 +8,14 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 </head>
 <body>
-    Update Turtle
+    <h1>Update Turtle</h1>
     <form action="/update/{{ turtle.id }}" method="post">
        
 
         <div class="mb-3"> 
-              <label for="exampleFormControlInput1" class="form-label">Turtle</label>
+              <label for="exampleFormControlInput1" class="form-label"><h2>Turtle</h2></label>
+            <img src="/static/kam0022-054.jpg" alt="Dinosaur" width="700px" height="500px" />
+            
               <input  name="Turtlename" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Let's Edit Turtles's name" value="{{ turtle.name }}"">
             </div>
     <button type="submit" class="btn btn-primary">更新</button>
@@ -35,6 +37,7 @@
               </div>
               <div class="modal-body">
                 ID、名前を再び確認してください
+　　  <img src="/static/unnamed.jpg" alt="Dinosaur" width="300px" height="200px" />
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-primary" data-bs-dismiss="modal">戻る</button>
