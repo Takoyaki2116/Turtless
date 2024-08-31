@@ -21,9 +21,10 @@ def list():
 def add():
     return render_template("add.html")
 
-@app.route("/edit")
-def edit():
-    return render_template("edit.html")
+@app.route("/edit/<id>")
+def edit(id):
+      turtle = Turtle.get(id=id)
+      return render_template("edit.html", turtle=turtle)
 
 @app.route("/new", methods=["POST"])
 def new():
