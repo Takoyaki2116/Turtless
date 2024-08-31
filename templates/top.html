@@ -11,12 +11,13 @@
 <body>
     Turtles List
     <a class="btn btn-primary" href="/add">追加</a>
-    <a class="btn btn-success" href="/edit">修正</a>
-    <table>
+
+    <table class="table table-success table-striped">
         <thead>
             <tr>
                 <th>Turtle ID</th>
                 <th>Turtlename</th>
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -24,6 +25,7 @@
             <tr>
                 <td>{{ turtle.id}}</td>
                 <td>{{ turtle.name }}</td>
+                 <td><a class="btn btn-success" href="/edit">修正</a> </td>
             </tr>
             {% endfor %}
         </tbody>
